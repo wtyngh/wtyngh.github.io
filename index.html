@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ting-Hao Wang</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet"/>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Lato', 'Helvetica Neue', Arial, sans-serif;
+      font-size: 15px;
+      line-height: 1.65;
+      color: #222;
+      background: #fff;
+    }
+    a { color: #1772d0; text-decoration: none; }
+    a:hover { text-decoration: underline; color: #f09228; }
+    .page { max-width: 800px; margin: 0 auto; padding: 44px 24px 72px; }
+
+    /* BIO */
+    .bio-wrap { display: flex; gap: 28px; align-items: flex-start; margin-bottom: 36px; }
+    .bio-text { flex: 1; }
+    .bio-photo { flex-shrink: 0; width: 160px; text-align: center; }
+    .bio-photo .photo-placeholder {
+      width: 150px; height: 185px; border: 1px dashed #bbb; border-radius: 6px;
+      background: #f7f7f7; display: flex; align-items: center; justify-content: center;
+      font-size: 11.5px; color: #aaa; text-align: center; padding: 10px; line-height: 1.5; margin: 0 auto;
+    }
+    .bio-photo img { width: 150px; border-radius: 6px; border: 1px solid #ddd; }
+    h1.name { font-size: 24px; font-weight: 700; margin-bottom: 12px; }
+    .bio-text p { margin-bottom: 10px; font-size: 14.5px; }
+    .bio-links { margin-top: 12px; font-size: 13.5px; display: flex; flex-wrap: wrap; }
+    .bio-links a { margin-right: 6px; white-space: nowrap; }
+    .bio-links .sep { color: #ccc; margin-right: 6px; }
+
+    /* SECTION */
+    h2.section {
+      font-size: 20px; font-weight: 700; color: #1a1a1a;
+      padding-bottom: 5px; border-bottom: 2px solid #1772d0; margin: 40px 0 18px;
+    }
+
+    /* NEWS */
+    .news-list { list-style: none; }
+    .news-list li { font-size: 14px; padding: 5px 0; border-bottom: 1px solid #f2f2f2; display: flex; gap: 10px; }
+    .news-list li:last-child { border-bottom: none; }
+    .news-date { font-weight: 700; color: #555; white-space: nowrap; min-width: 78px; }
+
+    /* PUBLICATIONS */
+    .pub-list { padding-left: 20px; }
+    .pub-list li {
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 10px;
+      color: #333;
+    }
+    .pub-links { display: inline; margin-left: 4px; }
+    .pub-links a { font-size: 13px; margin-right: 2px; color: #1772d0; }
+    .pub-links a::before { content: "["; }
+    .pub-links a::after  { content: "]"; }
+
+    /* PROJECTS */
+    .project { display: flex; gap: 18px; margin-bottom: 26px; align-items: flex-start; }
+    .project-thumb { flex-shrink: 0; width: 192px; }
+    .yt-wrap {
+      display: block; position: relative; width: 192px; height: 108px;
+      border-radius: 5px; overflow: hidden; border: 1px solid #ddd;
+      background: #111; cursor: pointer; text-decoration: none;
+    }
+    .yt-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; transition: opacity 0.15s; }
+    .yt-wrap:hover img { opacity: 0.82; }
+    .yt-play { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; pointer-events: none; }
+    .yt-btn { width: 44px; height: 31px; background: rgba(0,0,0,0.72); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
+    .yt-btn svg { width: 14px; height: 14px; fill: #fff; }
+    .project-title { font-weight: 700; font-size: 14.5px; margin-bottom: 5px; line-height: 1.4; }
+    .project-desc { font-size: 13.5px; color: #444; line-height: 1.6; margin-bottom: 7px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 4px; }
+    .tag { font-size: 11.5px; background: #eef3fc; color: #1a56a8; border-radius: 3px; padding: 1px 8px; }
+
+    .footer { margin-top: 52px; font-size: 12px; color: #bbb; text-align: center; border-top: 1px solid #eee; padding-top: 16px; }
+    .footer a { color: #bbb; }
+
+    @media (max-width: 580px) {
+      .bio-wrap { flex-direction: column-reverse; }
+      .bio-photo { width: 100%; }
+      .pub, .project { flex-direction: column; }
+      .pub-thumb, .project-thumb { width: 100%; }
+      .pub-thumb .thumb-ph, .pub-thumb img { width: 100%; height: 120px; }
+      .yt-wrap { width: 100%; height: 54vw; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- BIO -->
+  <div class="bio-wrap">
+    <div class="bio-text">
+      <h1 class="name">Ting-Hao Wang &nbsp;<span style="font-size:17px;font-weight:300;color:#666;">(王廷豪)</span></h1>
+      <p>
+        I am a Ph.D. candidate in Mechanical Engineering at the
+        <a href="https://www.berkeley.edu">University of California, Berkeley</a>,
+        advised by <a href="https://www.me.berkeley.edu/people/faculty/mark-w-mueller">Prof. Mark W. Mueller</a>
+        at the <a href="https://hiperlab.berkeley.edu">High Performance Robotics Lab (HiPeRLab)</a>.
+        My research focuses on efficient path planning for quadcopters operating in cluttered, unstructured
+        environments, with an emphasis on algorithms that run in real time on resource-constrained onboard hardware.
+      </p>
+      <p>
+        I received my B.S. and M.S. in Mechanical Engineering from
+        <a href="https://www.ntu.edu.tw/english/">National Taiwan University</a> in 2016 and 2018,
+        where I designed and built <em>TurboQuad</em> — a leg-wheel transformable robot with autonomous
+        gait selection using real-time RGBD vision — under Prof. Pei-Chun Lin. Earlier, I also developed
+        a 7-DOF robotic arm on a wheeled platform for the TDK Robocon competition, placing 3rd nationally.
+      </p>
+      <div class="bio-links">
+        <a href="mailto:wtyngh@berkeley.edu">Email</a>
+        <span class="sep">/</span>
+        <a href="https://scholar.google.com" target="_blank">Google Scholar</a>
+        <span class="sep">/</span>
+        <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+    <div class="bio-photo">
+      <div class="photo-placeholder">Add your<br/>profile photo<br/>here</div>
+      <!-- To add photo: replace above div with:
+           <img src="photo.jpg" alt="Ting-Hao Wang" /> -->
+    </div>
+  </div>
+
+  <!-- PROJECTS -->
+  <h2 class="section">Projects</h2>
+
+  <div class="project">
+    <div class="project-thumb">
+      <a class="yt-wrap" href="https://www.youtube.com/watch?v=pmSqvFKmoEo" target="_blank">
+        <img src="https://img.youtube.com/vi/pmSqvFKmoEo/mqdefault.jpg" alt="TurboQuad"/>
+        <div class="yt-play"><div class="yt-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div></div>
+      </a>
+    </div>
+    <div class="project-body">
+      <div class="project-title">TurboQuad — Leg-Wheel Transformable Quadruped Robot</div>
+      <div class="project-desc">
+        A novel leg-wheel transformable robot capable of autonomous gait selection and obstacle avoidance
+        using real-time RGBD visual feedback. Features a unique mechanism enabling agile transitions between
+        wheeled and legged locomotion, with terrain classification achieving over 95% accuracy via a CNN-based
+        system. Recognized as a top-3 finalist in the 2017 NI Global Student Design Showcase.
+      </div>
+      <div class="tags">
+        <span class="tag">Transformable Robot</span>
+        <span class="tag">Gait Planning</span>
+        <span class="tag">RGBD Vision</span>
+        <span class="tag">CNN</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="project">
+    <div class="project-thumb">
+      <a class="yt-wrap" href="https://www.youtube.com/watch?v=vltucKbxr5M&t=580s" target="_blank">
+        <img src="https://img.youtube.com/vi/vltucKbxr5M/mqdefault.jpg" alt="TDK Robocon"/>
+        <div class="yt-play"><div class="yt-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div></div>
+      </a>
+    </div>
+    <div class="project-body">
+      <div class="project-title">TDK Robocon — Autonomous Wheeled Robot with 7-DOF Robotic Arm</div>
+      <div class="project-desc">
+        Fully autonomous wheeled vehicle mounted with a 7-DOF robotic arm, built for Taiwan's largest
+        robotics competition. Integrated forward/inverse kinematics for arm trajectory planning and fused
+        imagery with distance sensors for precise vehicle localization. Completed tasks including
+        penmanship, color classification, and basketball picking &amp; shooting — 3rd place, autonomous group.
+      </div>
+      <div class="tags">
+        <span class="tag">7-DOF Arm</span>
+        <span class="tag">Kinematics</span>
+        <span class="tag">Sensor Fusion</span>
+        <span class="tag">TDK Robocon</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="project">
+    <div class="project-thumb">
+      <a class="yt-wrap" href="https://www.youtube.com/watch?v=g2i6CaFeO08" target="_blank">
+        <img src="https://img.youtube.com/vi/g2i6CaFeO08/mqdefault.jpg" alt="Inverted Pendulum Car"/>
+        <div class="yt-play"><div class="yt-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div></div>
+      </a>
+    </div>
+    <div class="project-body">
+      <div class="project-title">Inverted Pendulum Car</div>
+      <div class="project-desc">
+        A self-balancing two-wheeled vehicle with an inverted pendulum. Derived the physical model for
+        stability analysis and applied feedforward control to maintain balance under various perturbations
+        and external loads.
+      </div>
+      <div class="tags">
+        <span class="tag">Control Systems</span>
+        <span class="tag">Feedforward Control</span>
+        <span class="tag">Stability Analysis</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="project">
+    <div class="project-thumb">
+      <a class="yt-wrap" href="https://www.youtube.com/watch?v=WEzqyKIAQLw" target="_blank">
+        <img src="https://img.youtube.com/vi/WEzqyKIAQLw/mqdefault.jpg" alt="Autonomous Parking"/>
+        <div class="yt-play"><div class="yt-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div></div>
+      </a>
+    </div>
+    <div class="project-body">
+      <div class="project-title">Autonomous Parking System</div>
+      <div class="project-desc">
+        Autonomous parking system using real-time image processing to identify and localize color-coded
+        parking spaces, then plan and execute the parking maneuver entirely onboard.
+      </div>
+      <div class="tags">
+        <span class="tag">Computer Vision</span>
+        <span class="tag">Image Processing</span>
+        <span class="tag">Autonomous Navigation</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="project">
+    <div class="project-thumb">
+      <a class="yt-wrap" href="https://www.youtube.com/watch?v=y2rebVsF0Pc" target="_blank">
+        <img src="https://img.youtube.com/vi/y2rebVsF0Pc/mqdefault.jpg" alt="FlexiRehab"/>
+        <div class="yt-play"><div class="yt-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div></div>
+      </a>
+    </div>
+    <div class="project-body">
+      <div class="project-title">FlexiRehab — Portable Rehabilitation Feedback Module</div>
+      <div class="project-desc">
+        A clip-on sensor module that attaches to standard resistance bands to bring quantifiable,
+        objective data to physical therapy. Using a built-in load cell and IMU, the device measures
+        tension force (5–40 lbs), tracks pitch and angle of movement, auto-starts a timer, and counts
+        repetitions via vertical acceleration — delivering real-time feedback on an onboard LCD display
+        without requiring a smartphone.
+      </div>
+      <div class="tags">
+        <span class="tag">Mechatronics</span>
+        <span class="tag">Load Cell</span>
+        <span class="tag">IMU</span>
+        <span class="tag">Rehabilitation</span>
+        <span class="tag">Embedded Systems</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- PUBLICATIONS -->
+  <h2 class="section">Publications</h2>
+  <ol class="pub-list">
+    <li>
+      D. Zhang, A. Loquercio, J. Tang, <strong>T.-H. Wang</strong>, J. Malik, M. W. Mueller,
+      "A Learning-based Quadcopter Controller with Extreme Adaptation,"
+      <em>IEEE Transactions on Robotics (T-RO)</em>, 2025.
+      <span class="pub-links"><a href="#">pdf</a></span>
+    </li>
+    <li>
+      L. R. Rubi, J. Kam, R. Luo, J. Yang, X. Zheng, E. Zou, <strong>T.-H. Wang</strong>, M. W. Mueller,
+      "UCAirLink: A VTOL-Based Air Transportation System for Optimizing Commuter Efficiency,"
+      <em>Vertical Flight Society Forum Proceedings</em>, 2025.
+      <span class="pub-links"><a href="#">pdf</a></span>
+    </li>
+    <li>
+      <strong>T.-H. Wang</strong> and P.-C. Lin,
+      "A Reduced-Order-Model-Based Motion Selection Strategy in a Leg-Wheel Transformable Robot,"
+      <em>IEEE/ASME Transactions on Mechatronics (T-MECH)</em>, vol. 27, no. 5, pp. 3315–3321, Dec. 2021.
+      <span class="pub-links"><a href="#">pdf</a></span>
+    </li>
+    <li>
+      H.-Y. Chen, <strong>T.-H. Wang</strong>, K.-C. Ho, C.-Y. Ko, P.-C. Lin, P.-C. Lin,
+      "Development of a Novel Leg-Wheel Module with Fast Transformation and Leaping Capability,"
+      <em>Mechanism and Machine Theory</em>, vol. 163, 104348, Sep. 2021.
+      <span class="pub-links"><a href="#">pdf</a></span>
+    </li>
+    <li>
+      C. Liu, <strong>T.-H. Wang</strong>, P.-C. Lin,
+      "Development of an Innovative 2-DOF Continuous-Rotatable Mechanism,"
+      <em>International Symposium on Robotics and Mechatronics (ISRM)</em>, vol. 78, pp. 125–137, Oct. 2019.
+      <span class="pub-links"><a href="#">pdf</a></span>
+    </li>
+    <li>
+      S. L. Hsu, K. W. Liu, C. H. Hsiung, S. Y. Chen, <strong>T.-H. Wang</strong>, P.-C. Lin,
+      "Flip-and-Leap in a Hexapod Robot,"
+      <em>iRobotics</em>, 2019.
+      <span class="pub-links"><a href="#">pdf</a></span>
+    </li>
+    <li>
+      <strong>T.-H. Wang</strong>, D. G. Sung, P.-C. Lin,
+      "Terrain Classification, Navigation, and Gait Selection in a Leg-Wheel Transformable Robot Using Environmental RGBD Information,"
+      <em>International Automatics Control Conference (CACS)</em>, Nov. 2018.
+      <span class="pub-links"><a href="#">pdf</a></span>
+    </li>
+  </ol>
+
+  <div class="footer">
+    Last updated: April 2026
+  </div>
+
+</div>
+</body>
+</html>
