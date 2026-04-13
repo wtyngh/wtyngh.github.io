@@ -19,15 +19,15 @@
     .page { max-width: 800px; margin: 0 auto; padding: 44px 24px 72px; }
 
     /* BIO */
-    .bio-wrap { display: flex; gap: 28px; align-items: flex-start; margin-bottom: 36px; }
+    .bio-wrap { display: flex; gap: 28px; align-items: stretch; margin-bottom: 36px; }
     .bio-text { flex: 1; }
-    .bio-photo { flex-shrink: 0; width: 160px; text-align: center; }
+    .bio-photo { flex-shrink: 0; width: 200px; display: flex; }
     .bio-photo .photo-placeholder {
       width: 150px; height: 185px; border: 1px dashed #bbb; border-radius: 6px;
       background: #f7f7f7; display: flex; align-items: center; justify-content: center;
       font-size: 11.5px; color: #aaa; text-align: center; padding: 10px; line-height: 1.5; margin: 0 auto;
     }
-    .bio-photo img { width: 150px; border-radius: 6px; border: 1px solid #ddd; }
+    .bio-photo img { width: 200px; height: 100%; object-fit: cover; border-radius: 6px; border: 1px solid #ddd; display: block; }
     h1.name { font-size: 24px; font-weight: 700; margin-bottom: 12px; }
     .bio-text p { margin-bottom: 10px; font-size: 14.5px; }
     .bio-links { margin-top: 12px; font-size: 13.5px; display: flex; flex-wrap: wrap; }
@@ -96,7 +96,7 @@
   <!-- BIO -->
   <div class="bio-wrap">
     <div class="bio-text">
-      <h1 class="name">Ting-Hao Wang &nbsp;<span style="font-size:17px;font-weight:300;color:#666;">(王廷豪)</span></h1>
+      <h1 class="name">Ting-Hao Wang &nbsp;<span style="font-size:17px;font-weight:300;color:#666;">(王霆皓)</span></h1>
       <p>
         I am a Ph.D. candidate in Mechanical Engineering at the
         <a href="https://www.berkeley.edu">University of California, Berkeley</a>,
@@ -114,15 +114,13 @@
       <div class="bio-links">
         <a href="mailto:wtyngh@berkeley.edu">Email</a>
         <span class="sep">/</span>
-        <a href="https://scholar.google.com" target="_blank">Google Scholar</a>
+        <a href="https://scholar.google.com/citations?user=bjLMZvcAAAAJ&hl=en&authuser=2" target="_blank">Google Scholar</a>
         <span class="sep">/</span>
-        <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/ting-hao-wang-48375b19b/" target="_blank">LinkedIn</a>
       </div>
     </div>
     <div class="bio-photo">
-      <div class="photo-placeholder">Add your<br/>profile photo<br/>here</div>
-      <!-- To add photo: replace above div with:
-           <img src="photo.jpg" alt="Ting-Hao Wang" /> -->
+      <img src="Ting-Hao_1.jpg" alt="Ting-Hao Wang" />
     </div>
   </div>
 
