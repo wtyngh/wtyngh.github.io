@@ -1,8 +1,8 @@
 # Ting-Hao Wang — Personal Website
 
-🌐 **Live site**: [https://tinghao-wang.github.io](https://tinghao-wang.github.io)
+🌐 **Live site**: [https://wtyngh.github.io](https://wtyngh.github.io)
 
-Ting-Hao Wang is a Ph.D. candidate in Mechanical Engineering at UC Berkeley, advised by Prof. Mark W. Mueller at the High Performance Robotics Lab (HiPeRLab). His research focuses on efficient path planning for quadcopters operating in cluttered, unstructured environments. He received his B.S. and M.S. from National Taiwan University, where he designed TurboQuad, a leg-wheel transformable robot, and built a 7-DOF robotic arm system for the TDK Robocon competition.
+Ting-Hao Wang is a Ph.D. candidate in Mechanical Engineering at UC Berkeley, advised by Prof. Mark W. Mueller at the High Performance Robotics Lab (HiPeRLab). His work centers on developing efficient path-planning algorithms and novel quadcopter configurations for improved performance navigating in cluttered and unstructured environments. He earned his B.S. and M.S. from National Taiwan University, where he developed TurboQuad, an innovative leg-wheel transformable robot capable of autonomous behavioral transitions according to the surroundings.
 
 ## Contents
 
