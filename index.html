@@ -98,18 +98,22 @@
     <div class="bio-text">
       <h1 class="name">Ting-Hao Wang &nbsp;<span style="font-size:17px;font-weight:300;color:#666;">(王霆皓)</span></h1>
       <p>
-        I am a Ph.D. candidate in Mechanical Engineering at the
+        I am a robotics enthusiast with a passion for mechanism design, mechatronics, and hands-on system
+        integration. I am a Ph.D. candidate in Mechanical Engineering at the
         <a href="https://www.berkeley.edu">University of California, Berkeley</a>,
         advised by <a href="https://www.me.berkeley.edu/people/faculty/mark-w-mueller">Prof. Mark W. Mueller</a>
         at the <a href="https://hiperlab.berkeley.edu">High Performance Robotics Lab (HiPeRLab)</a>.
-        My work centers on developing efficient path-planning algorithms and novel quadcopter configurations
-        for improved performance navigating in cluttered and unstructured environments.
+        My research focuses on co-designing novel quadcopter configurations and efficient path-planning
+        algorithms to achieve improved agility and stability in cluttered environments.
       </p>
       <p>
         I earned my B.S. and M.S. from
         <a href="https://www.ntu.edu.tw/english/">National Taiwan University</a>,
-        where I developed <em>TurboQuad</em>, an innovative leg-wheel transformable robot capable of
-        autonomous behavioral transitions according to the surroundings.
+        advised by <a href="http://cisco3.me.ntu.edu.tw/main.php?mod=adv_custom_page&func=show_page&site_id=0&page_id=205" target="_blank">Prof. Pei-Chun Lin</a>
+        in the <a href="http://biorola.me.ntu.edu.tw/" target="_blank">Bio-inspired Robotics Lab (BioRoLa)</a>, where I developed <em>TurboQuad</em>, an innovative leg-wheel transformable robot capable of
+        autonomous behavioral transitions according to the surroundings. My work spans the full stack
+        from mechanical design and embedded systems to planning and control, driven by a love for
+        building robots that work in the real world.
       </p>
       <div class="bio-links">
         <a href="mailto:wtyngh@berkeley.edu">Email</a>
@@ -129,6 +133,29 @@
 
   <div class="project">
     <div class="project-thumb">
+      <a class="yt-wrap" href="https://www.youtube.com/watch?v=kZEU8lxMZug" target="_blank">
+        <img src="https://img.youtube.com/vi/kZEU8lxMZug/mqdefault.jpg" alt="Learning-based Quadcopter Controller"/>
+        <div class="yt-play"><div class="yt-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div></div>
+      </a>
+    </div>
+    <div class="project-body">
+      <div class="project-title">A Learning-based Quadcopter Controller with Extreme Adaptation</div>
+      <div class="project-desc">
+        A reinforcement learning-based quadcopter controller capable of adapting in real time to extreme
+        changes in system dynamics, including motor failures, payload variations, and structural damage,
+        without requiring explicit fault detection or model updates. Published in IEEE T-RO 2025.
+      </div>
+      <div class="tags">
+        <span class="tag">Quadcopter</span>
+        <span class="tag">Reinforcement Learning</span>
+        <span class="tag">Adaptive Control</span>
+        <span class="tag">Fault Tolerance</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="project">
+    <div class="project-thumb">
       <a class="yt-wrap" href="https://www.youtube.com/watch?v=pmSqvFKmoEo" target="_blank">
         <img src="https://img.youtube.com/vi/pmSqvFKmoEo/mqdefault.jpg" alt="TurboQuad"/>
         <div class="yt-play"><div class="yt-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div></div>
@@ -139,8 +166,9 @@
       <div class="project-desc">
         A novel leg-wheel transformable robot capable of autonomous gait selection and obstacle avoidance
         using real-time RGBD visual feedback. Features a unique mechanism enabling agile transitions between
-        wheeled and legged locomotion, with terrain classification achieving over 95% accuracy via a CNN-based
-        vision system. Recognized as a top-3 finalist in the 2017 NI Global Student Design Showcase.
+        wheeled and legged locomotion. Recognized as a top-3 finalist in the 2017 NI Global Student Design Showcase. The
+        motion selection strategy developed for this platform was published in
+        IEEE T-MECH, 2021.
       </div>
       <div class="tags">
         <span class="tag">Transformable Robot</span>
@@ -161,10 +189,10 @@
     <div class="project-body">
       <div class="project-title">Autonomous Wheeled Robot with 7-DOF Robotic Arm</div>
       <div class="project-desc">
-        Fully autonomous wheeled vehicle mounted with a 7-DOF robotic arm, built for Taiwan's largest
-        robotics competition in 2015. Integrated forward/inverse kinematics for arm trajectory planning and fused
-        imagery with distance sensors for precise vehicle localization. Completed tasks including
-        penmanship, color classification, basketball picking and shooting. Our teanm won 3rd place in autonomous group, in 2015 TDK Robocon.
+        Built for the 2015 TDK Robocon, this fully autonomous wheeled robot integrates a 7-DOF arm with
+        forward/inverse kinematics for trajectory planning and sensor-fused localization. The system
+        completed multi-modal tasks including penmanship, color classification, and basketball shooting,
+        earning 3rd place in the autonomous group.
       </div>
       <div class="tags">
         <span class="tag">7-DOF Arm</span>
@@ -185,9 +213,10 @@
     <div class="project-body">
       <div class="project-title">Inverted Pendulum Car</div>
       <div class="project-desc">
-        A self-balancing two-wheeled vehicle with an inverted pendulum. Derived the physical model for
-        stability analysis and applied feedforward control to maintain balance under various perturbations
-        and external loads.
+        Designed and built a two-wheeled self-balancing vehicle based on the inverted pendulum model.
+        Derived the equations of motion and performed stability analysis to characterize the system dynamics.
+        Applied feedforward control to achieve robust balancing under external disturbances and varying loads,
+        validating the controller through physical experiments.
       </div>
       <div class="tags">
         <span class="tag">Control Systems</span>
@@ -207,8 +236,10 @@
     <div class="project-body">
       <div class="project-title">Autonomous Parking System</div>
       <div class="project-desc">
-        Autonomous parking system using real-time image processing to identify and localize color-coded
-        parking spaces, then plan and execute the parking maneuver entirely onboard.
+        Developed a fully onboard autonomous parking system for a wheeled robot. Used real-time color-based
+        image processing to detect and localize designated parking spaces in the environment. Planned and
+        executed the parking maneuver autonomously, achieving accurate positioning without external computation
+        or human intervention.
       </div>
       <div class="tags">
         <span class="tag">Computer Vision</span>
@@ -250,7 +281,7 @@
       D. Zhang, A. Loquercio, J. Tang, <strong>T.-H. Wang</strong>, J. Malik, M. W. Mueller,
       "A Learning-based Quadcopter Controller with Extreme Adaptation,"
       <em>IEEE Transactions on Robotics (T-RO)</em>, 2025.
-      <span class="pub-links"><a href="papers/zhang2025_tro.pdf" target="_blank">pdf</a><a href="https://ieeexplore.ieee.org/document/11025148" target="_blank">doi</a></span>
+      <span class="pub-links"><a href="papers/zhang2025_tro.pdf" target="_blank">pdf</a><a href="https://ieeexplore.ieee.org/document/11025148" target="_blank">doi</a><a href="https://www.youtube.com/watch?v=kZEU8lxMZug" target="_blank">video</a></span>
     </li>
     <li>
       L. R. Rubi, J. Kam, R. Luo, J. Yang, X. Zheng, E. Zou, <strong>T.-H. Wang</strong>, M. W. Mueller,
@@ -261,19 +292,19 @@
     <li>
       <strong>T.-H. Wang</strong> and P.-C. Lin,
       "A Reduced-Order-Model-Based Motion Selection Strategy in a Leg-Wheel Transformable Robot,"
-      <em>IEEE/ASME Transactions on Mechatronics (T-MECH)</em>, vol. 27, no. 5, pp. 3315–3321, Dec. 2021.
-      <span class="pub-links"><a href="papers/wang2021_tmech.pdf" target="_blank">pdf</a><a href="https://ieeexplore.ieee.org/document/9639003" target="_blank">doi</a></span>
+      <em>IEEE/ASME Transactions on Mechatronics (T-MECH)</em>, vol. 27, no. 5, pp. 3315–3321, 2021.
+      <span class="pub-links"><a href="papers/wang2021_tmech.pdf" target="_blank">pdf</a><a href="https://ieeexplore.ieee.org/document/9639003" target="_blank">doi</a><a href="https://www.youtube.com/watch?v=pmSqvFKmoEo" target="_blank">video</a></span>
     </li>
     <li>
       H.-Y. Chen, <strong>T.-H. Wang</strong>, K.-C. Ho, C.-Y. Ko, P.-C. Lin, P.-C. Lin,
       "Development of a Novel Leg-Wheel Module with Fast Transformation and Leaping Capability,"
-      <em>Mechanism and Machine Theory</em>, vol. 163, 104348, Sep. 2021.
+      <em>Mechanism and Machine Theory</em>, vol. 163, 104348, 2021.
       <span class="pub-links"><a href="papers/chen2021_mmt.pdf" target="_blank">pdf</a><a href="https://www.sciencedirect.com/science/article/abs/pii/S0094114X21001063" target="_blank">doi</a></span>
     </li>
     <li>
       C. Liu, <strong>T.-H. Wang</strong>, P.-C. Lin,
       "Development of an Innovative 2-DOF Continuous-Rotatable Mechanism,"
-      <em>International Symposium on Robotics and Mechatronics (ISRM)</em>, vol. 78, pp. 125–137, Oct. 2019.
+      <em>International Symposium on Robotics and Mechatronics (ISRM)</em>, vol. 78, pp. 125–137, 2019.
       <span class="pub-links"><a href="papers/liu2019_isrm.pdf" target="_blank">pdf</a><a href="https://doi.org/10.1007/978-3-030-30036-4_11" target="_blank">doi</a></span>
     </li>
     <li>
@@ -285,8 +316,19 @@
     <li>
       <strong>T.-H. Wang</strong>, D. G. Sung, P.-C. Lin,
       "Terrain Classification, Navigation, and Gait Selection in a Leg-Wheel Transformable Robot Using Environmental RGBD Information,"
-      <em>International Automatics Control Conference (CACS)</em>, Nov. 2018.
+      <em>International Automatics Control Conference (CACS)</em>, 2018.
       <span class="pub-links"><a href="papers/wang2018_cacs.pdf" target="_blank">pdf</a><a href="https://ieeexplore.ieee.org/document/8606730" target="_blank">doi</a></span>
+    </li>
+  </ol>
+
+  <!-- PATENTS -->
+  <h2 class="section">Patents</h2>
+  <ol class="pub-list">
+    <li>
+      P.-C. Lin, H.-Y. Chen, <strong>T.-H. Wang</strong>,
+      "Wheel-Leg Hybrid Module with Rapid Transformation Capability,"
+      R.O.C. Patent I764563, 2022.
+      <span class="pub-links"><a href="https://patents.google.com/patent/TWI764563" target="_blank">patent</a></span>
     </li>
   </ol>
 
