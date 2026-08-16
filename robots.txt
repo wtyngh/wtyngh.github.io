@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://wtyngh.github.io/sitemap.xml
